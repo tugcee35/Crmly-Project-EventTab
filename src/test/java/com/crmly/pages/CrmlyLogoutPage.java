@@ -11,12 +11,13 @@ public CrmlyLogoutPage(){
     PageFactory.initElements(Driver.getDriver(), this);
 }
 
-    @FindBy(xpath = "//*[@id=\"popup-window-content-menu-popup-user-menu\"]/div/div/a[3]/span[2]")
+    @FindBy(id = "user-block")
     public WebElement userNameUpper;
 
-    @FindBy(linkText = "Log out")
-    public WebElement LogOutLink;
+    @FindBy(xpath = "//span[.='Log out']")
+    public WebElement logOutLink;
 
     @FindBy(xpath = "//h4[@class='modal-title']")
     public WebElement expiredAlert;
+
 }

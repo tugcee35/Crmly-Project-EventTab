@@ -11,10 +11,10 @@ public class CrmlyLoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(name = "USER_LOGIN")
+    @FindBy(xpath = "//input[@placeholder='Login']")
     public WebElement usernameInput;
 
-    @FindBy(name = "USER_PASSWORD")
+    @FindBy(xpath = "//input[@type='password']")
     public WebElement passwordInput;
 
     @FindBy(xpath = "//input[@type='submit']")
@@ -25,4 +25,9 @@ public class CrmlyLoginPage {
 
     @FindBy(linkText = "Forgot your password?")
     public WebElement forgotPasswordLink;
+
+    @FindBy(id = "USER_REMEMBER")
+    public WebElement inputRememberMe;
+
+
 }
